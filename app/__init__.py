@@ -22,8 +22,9 @@ from .main.helpers.framework_helpers import get_latest_live_framework
 from .main.helpers.search_save_helpers import SavedSearchStateEnum
 
 
+from dmutils.compat import MutliDecodeCompatibilityApp
 def create_app(config_name):
-    application = Flask(__name__)
+    application = DMFlask(__name__)
 
     init_app(
         application,
